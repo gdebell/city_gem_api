@@ -27,6 +27,7 @@ class SitesController < ApplicationController
     @site.save
   end
 
+
   def update
     @site = Site.find(params[:id])
     @site.update_attributes(site_params)
