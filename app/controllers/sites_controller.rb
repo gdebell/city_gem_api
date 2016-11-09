@@ -27,6 +27,11 @@ class SitesController < ApplicationController
     @site.save
   end
 
+  def update
+    @site = Site.find(params[:id])
+    @site.update_attributes(site_params)
+  end
+
   private
 
   def site_params
@@ -34,19 +39,6 @@ class SitesController < ApplicationController
   end
 
 ######
-
-  # GET /sites/1/edit
-  # def edit
-  # end
-  #
-  # # PATCH/PUT /sites/1
-  # def update
-  #   if @site.update(site_params)
-  #     redirect_to @site, notice: 'Site was successfully updated.'
-  #   else
-  #     render :edit
-  #   end
-  # end
 
 
 
